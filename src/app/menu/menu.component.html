@@ -8,7 +8,7 @@
       <hr>
     </div>
   </div>
-  <div fxFlex *ngIf="dishes">
+  <div fxFlex *ngIf="dishes" [@expand]>
     <md-grid-list cols="2" rowHeight="200px">
       <md-grid-tile *ngFor="let dish of dishes" [routerLink]="['/dishdetail', dish.id]" appHighlight>
         <img height="200px" src="{{BaseURL + dish.image}}" alt={{dish.name}}>
@@ -51,7 +51,7 @@
 
   <div fxFlex="40">
     
-     <div fxFlex *ngIf="dish">
+     <div fxFlex *ngIf="dish" [@expand]>
     <md-card>
       <md-card-header>
         <md-card-title>
@@ -72,7 +72,7 @@
   </div>
 
   <div fxFlex="40">
-    <md-list *ngIf="dish">
+    <md-list *ngIf="dish" [@expand]>
       <h3>Comments</h3>
       <md-list-item *ngFor="let comment of dish.comments">
         <h4 md-line> {{comment.comment}}</h4>

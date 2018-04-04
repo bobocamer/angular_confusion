@@ -52,7 +52,7 @@
    </div>
 
      
-     <div fxFlex *ngIf="leader">
+     <div fxFlex *ngIf="leader" [@expand]>
         <h2>Corporate Leadership</h2>
       <md-list>
         <md-list-item *ngFor="let leader of leader" >
